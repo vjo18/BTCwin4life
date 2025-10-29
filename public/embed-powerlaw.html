@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTC Power Law — Embed</title>
+
+    <!-- ====== Styling specifiek voor de embed ====== -->
+    <style>
+      /* ----- Basis layout ----- */
+      body {
+        background-color: transparent;
+        margin: 0;
+        padding: 0.5rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* ----- App container override ----- */
+      .min-h-screen {
+        background-color: transparent !important;
+        padding: 0 !important;
+      }
+
+      /* ----- Toon enkel de Power Law sectie ----- */
+      /* In jouw App.tsx: 
+         <div class="max-w-7xl mx-auto flex flex-col gap-6">
+           1️⃣ Eerste <motion.div> = Power Law kaart
+           2️⃣ Tweede <motion.div> = Stability kaart
+           3️⃣ <div class="grid ..."> = calculators enz.
+      */
+
+      /* Verberg de tweede motion.div = Stability card */
+      .max-w-7xl > div:nth-of-type(2) {
+        display: none !important;
+      }
+
+      /* Verberg de grid met calculators en andere tools */
+      .max-w-7xl > .grid {
+        display: none !important;
+      }
+
+      /* Optioneel: iets minder spacing voor embed context */
+      .max-w-7xl {
+        padding-bottom: 1rem !important;
+      }
+
+      /* Verberg eventuele header/footer als je die toevoegt in toekomst */
+      header,
+      footer {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- Vite entrypoint -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
