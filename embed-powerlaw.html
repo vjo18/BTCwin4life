@@ -64,6 +64,23 @@
       footer {
         display: none !important;
       }
+
+      /* Remove scrollbars in embed */
+html, body {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+/* Force container to not push outside iframe */
+#root,
+.max-w-7xl {
+  overflow: hidden !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
     </style>
 
     <div id="root"></div>
