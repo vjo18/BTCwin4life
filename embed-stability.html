@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC Power Law — Stability (Embed)</title>
+
+  <!-- Vite vervangt dit tijdens build door gehashte assets -->
+
+  <style>
+    /* Geen scrollbars, geen margins, transparante achtergrond */
+    html, body {
+      overflow: hidden !important;
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      background: transparent !important;
+    }
+    #root { height: 100% !important; width: 100% !important; }
+
+    /* App wrapper opschonen */
+    .min-h-screen {
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .max-w-7xl {
+      padding: 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+      min-height: 0 !important;
+      height: 100% !important;
+      overflow: hidden !important;
+    }
+
+    /* --- Alleen de 2e kaart tonen (Stability) --- */
+    /* Verberg 1e kaart (Power Law + KPI's) */
+    .max-w-7xl > div:first-child {
+      display: none !important;
+    }
+    /* Verberg grid/overige blokken */
+    .max-w-7xl > .grid {
+      display: none !important;
+    }
+
+    /* Haal kader weg van de 2e kaart */
+    .max-w-7xl > div:nth-of-type(2) {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    header, footer { display: none !important; }
+  </style>
+  <script type="module" crossorigin src="/BTCwin4life/assets/main-DlJa87eZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/BTCwin4life/assets/main-DGMZEBGw.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+</html>

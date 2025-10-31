@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC Power Law — Embed</title>
+
+  <!-- Load React app — Vite replaces this in build -->
+
+  <style>
+    /* Remove scrollbars, margin, background */
+    html, body {
+      overflow: hidden !important;
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      background: transparent !important;
+    }
+
+    #root {
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    /* Remove app background + padding */
+    .min-h-screen {
+      background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    /* Container cleanup */
+    .max-w-7xl {
+      padding: 0 !important;
+      margin: 0 !important;
+      background: transparent !important;
+      min-height: 0 !important;
+    }
+
+    /* Show ONLY the first card (Power-Law chart) */
+    .max-w-7xl > div:nth-of-type(2),
+    .max-w-7xl > .grid {
+      display: none !important;
+    }
+
+    /* Remove card styling — transparent embed */
+    .max-w-7xl > div:first-child {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    header, footer {
+      display: none !important;
+    }
+  </style>
+  <script type="module" crossorigin src="/BTCwin4life/assets/main-DlJa87eZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/BTCwin4life/assets/main-DGMZEBGw.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+</html>
