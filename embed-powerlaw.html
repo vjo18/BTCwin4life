@@ -81,6 +81,21 @@ html, body {
   margin: 0 !important;
 }
 
+  /* Remove black card background, border & rounding for embed */
+.max-w-7xl > div:first-child {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove global dark background if present */
+body, .min-h-screen, #root {
+  background: transparent !important;
+}
+
     </style>
 
     <div id="root"></div>
