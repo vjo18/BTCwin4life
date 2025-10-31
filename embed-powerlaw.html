@@ -7,25 +7,24 @@
 
 
   <style>
-    /* --- page reset --- */
     html, body {
       overflow: hidden !important;
-      height: 100% !important;
       margin: 0;
       padding: 0;
       background: transparent !important;
+      height: 100%;
     }
 
     #root {
-      height: 100% !important;
-      width: 100% !important;
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      height: 100%;
+      width: 100%;
       background: transparent !important;
     }
 
-    /* remove app wrapper styling */
+    /* remove app bg + spacing only in embed */
     .min-h-screen {
       background: transparent !important;
       padding: 0 !important;
@@ -37,23 +36,21 @@
       margin: 0 auto !important;
       padding: 0 !important;
       background: transparent !important;
-      min-height: 0 !important;
-      width: 100% !important;
       max-width: 1100px;
+      width: 100% !important;
     }
 
-    /* hide all other sections except first chart block */
-    .max-w-7xl > div:nth-of-type(2),
+    /* hide everything except first big card (powerlaw) */
+    .max-w-7xl > div:nth-child(n+2),
     .max-w-7xl > .grid {
       display: none !important;
     }
 
-    /* strip only the outer card container */
+    /* remove the outer card box (border/rounded/shadow) */
     .max-w-7xl > div:first-child {
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
-      outline: none !important;
       border-radius: 0 !important;
       margin: 0 auto !important;
       padding: 0 !important;
@@ -61,33 +58,35 @@
       max-width: 1100px;
     }
 
-    /* ✅ restore slider UI — make sure sliders keep styles */
-    .slider, [role="slider"], .radix-slider, .radix-slider-thumb, .radix-slider-track {
-      all: unset !important;
-      display: revert !important;
+    /* remove internal chart frame border & radius */
+    /* target recharts container + panel wrapper */
+    .recharts-wrapper,
+    .recharts-surface,
+    [class*="rounded"],
+    [class*="shadow"],
+    [class*="border"],
+    [class*="ring"] {
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
     }
 
-    /* restore background for slider thumb (circle) */
-    .radix-slider-thumb {
-      background-color: #fff !important;
-      border: 2px solid #0f172a !important; /* or your theme */
-      border-radius: 9999px !important;
+    /* keep slider styling (Radix) — do NOT override */
+    .radix-slider,
+    .radix-slider-thumb,
+    .radix-slider-track,
+    .radix-slider-range {
+      all: revert !important;
     }
 
-    /* restore track/rail styling */
-    .radix-slider-track, .radix-slider-range {
-      background: #94a3b8 !important; /* slate-400 */
-      height: 4px !important;
-      border-radius: 9999px;
+    header, footer {
+      display: none !important;
     }
-
-    header, footer { display: none !important; }
   </style>
-  <script type="module" crossorigin src="/BTCwin4life/assets/main-Cn1RLA8Z.js"></script>
-  <link rel="stylesheet" crossorigin href="/BTCwin4life/assets/main-B-FTXEUD.css">
+  <script type="module" crossorigin src="/BTCwin4life/assets/main-N5Z9h4FC.js"></script>
+  <link rel="stylesheet" crossorigin href="/BTCwin4life/assets/main-CRhJDtcH.css">
 </head>
-
 <body>
-  <div id="root"></div>
+<div id="root"></div>
 </body>
 </html>
