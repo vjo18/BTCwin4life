@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BTC Power Law — Embed</title>
 
-  <!-- Vite loads your React app -->
 
   <style>
-    /* --- Page reset --- */
+    /* --- page reset --- */
     html, body {
       overflow: hidden !important;
       height: 100% !important;
@@ -21,35 +20,35 @@
       height: 100% !important;
       width: 100% !important;
       display: flex;
-      justify-content: center;  /* center horizontally */
-      align-items: flex-start;   /* can change to center if needed */
+      justify-content: center;
+      align-items: flex-start;
       background: transparent !important;
     }
 
-    /* Remove Vite/Tailwind app wrapper styles */
+    /* remove app wrapper styling */
     .min-h-screen {
       background: transparent !important;
       padding: 0 !important;
       margin: 0 !important;
     }
 
-    /* Center container + transparent */
+    /* center container */
     .max-w-7xl {
       margin: 0 auto !important;
       padding: 0 !important;
       background: transparent !important;
       min-height: 0 !important;
       width: 100% !important;
-      max-width: 1100px; /* tweak if needed */
+      max-width: 1100px;
     }
 
-    /* --- Show only first card (Power Law) --- */
+    /* hide all other sections except first chart block */
     .max-w-7xl > div:nth-of-type(2),
     .max-w-7xl > .grid {
       display: none !important;
     }
 
-    /* --- Remove card frame / shadow / border --- */
+    /* strip only the outer card container */
     .max-w-7xl > div:first-child {
       background: transparent !important;
       border: none !important;
@@ -62,17 +61,27 @@
       max-width: 1100px;
     }
 
-    /* Just in case nested UI components have borders */
-    .max-w-7xl > div:first-child * {
-      border: 0 !important;
-      box-shadow: none !important;
-      background: transparent !important;
+    /* ✅ restore slider UI — make sure sliders keep styles */
+    .slider, [role="slider"], .radix-slider, .radix-slider-thumb, .radix-slider-track {
+      all: unset !important;
+      display: revert !important;
     }
 
-    /* Kill any header/footer if they exist */
-    header, footer {
-      display: none !important;
+    /* restore background for slider thumb (circle) */
+    .radix-slider-thumb {
+      background-color: #fff !important;
+      border: 2px solid #0f172a !important; /* or your theme */
+      border-radius: 9999px !important;
     }
+
+    /* restore track/rail styling */
+    .radix-slider-track, .radix-slider-range {
+      background: #94a3b8 !important; /* slate-400 */
+      height: 4px !important;
+      border-radius: 9999px;
+    }
+
+    header, footer { display: none !important; }
   </style>
   <script type="module" crossorigin src="/BTCwin4life/assets/main-Cn1RLA8Z.js"></script>
   <link rel="stylesheet" crossorigin href="/BTCwin4life/assets/main-B-FTXEUD.css">
